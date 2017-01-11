@@ -1,0 +1,7 @@
+<div class="container">
+    <div infinite-scroll="vm.getVideos(vm.videosParams)" infinite-scroll-distance="1">
+        <div ng-repeat="video in vm.videos">
+            <video-element ng-model="video" goto-video="vm.gotoVideo({id: id})"></video-element>
+        </div>
+    </div>
+</div>

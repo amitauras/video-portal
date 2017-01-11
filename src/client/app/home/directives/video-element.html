@@ -1,0 +1,17 @@
+<div class="panel panel-default">
+    <div class="panel-heading" ng-click="onTitle()">{{config.name}}</div>
+    <div class="panel-body">
+        <div align="center" class="embed-responsive embed-responsive-16by9">
+            <video class="video-js vjs-default-skin embed-responsive-item" controls id="{{config._id}}" vjs-video vjs-media="config.media" width="auto"
+                height="auto" preload="auto">
+                <object>
+                    <embed src="{{config.url}}" type= "application/x-shockwave-flash" allowscriptaccess="always" />
+                </object>
+            </video>
+        </div>
+        <div class="video-detail">
+            <rating-element ng-model="score" on-rating="onRating({score: score})"></rating-element>
+            <p ng-bind="config.description"></p>
+        </div>
+    </div>
+</div>
